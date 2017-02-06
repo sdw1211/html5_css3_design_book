@@ -66,9 +66,9 @@
 ## position
 
 1. element의 positioning method 의 종류를 결정해준다.
-2. static: 기본 값으로 순서에 맞게 표시
-3. absolute: 상위 static 하지 않은 element를 중심으로 위치를 잡는다?(흠 설명하기 힘들구만..)
-4. fixed: 문서 기반으로 위치 고정
-5. relative: Element의 현재 포지션을 기반으로 위치를 잡는다.
+2. static: 기본 값, 특별한 기능은 없고 순서대로 위치를 잡아줍니다.
+3. relative: 현재 위치를 기반으로 left, top 등을 설정된 값으로 이동을 시켜줍니다. left, top이 없을 경우는 static과 동일하게 동작합니다.
+4. absolute: 상위 문서의 position이 relative 인 경우 상위 문서를 기반으로 left, top 등을 설정한 값으로 이동합니다. 만약 상위 문서가 static인 relative 인 문서를 찾아서 그 문서 기반으로 움직이고 없으면 Document 기반으로 해서 움직입니다.
+5. fixed: 현재 문서 기반으로 위치를 잡아줍니다. 스크롤을 내리거나 올리더라도 위치는 그대로 있습니다.
 6. 자세한 내용은 아래 링크 참고  
    http://www.w3schools.com/cssref/pr_class_position.asp

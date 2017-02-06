@@ -21,7 +21,7 @@ div.boxA, div.boxB {
     div.box1 { }
     div.box2 {float: right; width:80%; }
     div.box3 {float: right; width:20%; }
-    div.box4 {float: left; width:20% }
+    div.box4 {width:20% }
 
     div.boxB {float: left; width:80%;}
     div.boxB::after {content: ""; display: block; clear:both;}
@@ -30,5 +30,15 @@ div.boxA, div.boxB {
         content: "";
         display: block;
         clear:both;
+    }
+
+    div.main{
+        position:relative;
+    }
+
+    div.sub{
+        position:fixed;
+        left:0px;
+        top:0px;
     }
 }
