@@ -1,0 +1,40 @@
+div {
+    width:auto;
+    height:auto;
+    border: 8px solid #ffccff;
+    background-color: #ff3;
+    text-align: center;
+    margin:0;
+    padding:0;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+.boxA div {
+    border: 8px solid #ff00ff;
+    background-color: #0f0;    
+}
+
+.boxA {
+    border: 0px;
+    background-color: #0f0;    
+}
+
+.boxA::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.box2 {
+    float: left;
+}
+
+.box3 {
+    float: left;
+}
+
+.box4 {
+    display: block;
+}
