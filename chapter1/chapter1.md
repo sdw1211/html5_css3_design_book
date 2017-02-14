@@ -22,7 +22,7 @@
 
 ## box-sizing
 
-1. width, height를 구할 때 padding, margin, border 를 포함할지 않할지를 결정해준다.
+1. width, height를 구할 때 padding, margin, border 를 포함할지 안할지를 결정해준다.
 2. Default는 padding, margion, border를 포함하지 않는 **content-box**이다.
 3. 만약 다 포함하고 싶은 경우는 **border-box**를 이용한다.
 4. 이전 버전의 브라우저에서도 동작하기 위해 -moz-, -webkit- 등의 접두어를 붙여서 사용하기도 한다.
@@ -117,8 +117,8 @@
 6. 기본적으로 자식 속성은 부모 속성을 상속받는다.(cacading)
 7. 긴놈이 이긴다.(.boxA 보다 div.boxA 가 더 길기 떄문에 div.boxA가 이긴다!)
 8. 자신을 직접 구현한 것이 이긴다!
-9. block: 부모가 허용하는한 될 수 있는한 가로를 가득 채운 것!(기본 테그 : div)
-10. inline: 앞에 있는 요소에 같은 배이스 요소로 다음 문자를 적는다.. 인라인 요소 중에서 가장 긴 게 가로 길이 적용
+9. block: 부모가 허용하는한 될 수 있는한 가로를 가득 채운 것!(기본 테그 : div), 세로로 배치
+10. inline: 앞에 있는 요소에 같은 배이스 요소로 다음 문자를 적는다.. 인라인 요소 중에서 가장 긴 게 가로 길이 적용, 가로로 배치
 11. inline-block: 
 12. display: block과 inline을 구성할 수 있는 속성.
 13. float: 화면 크기에 대응하는 스타일을 맞출 때 좋다!
@@ -126,5 +126,30 @@
    2. 실체가 아니다.(fixed, absolute, float)
    3. block 에게는 별다른 영향을 주지 않는다.(block은 float를 인식하지 못함)
    4. inline 에게는 가드 OR 가이드로 작동한다.
+14. 스팩문서를 보자! 잘은 안보겠지만...
+15. 개발 : 남이 만들어놓은 것을 이해한다는 것!
+16. BOX Model, Normal Flow, Display & float
+17. Normal Flow: html이 랜더링을 할 때 static 포지션(컴퓨터가 알아서)에서 그림을 그리는 방법
+   1. Block Formatting Context(BFC): 새로로 배치 시작
+      1. block 요소를 담을 수 있는 컨테이너,
+      2. ROOT, float != none, display == inline-block table-cell table-caption, overflow != visible, flex box
+      3. 새로운 BFC의 자식들을 제외하고 자식 element는 전부 포함
+      4. http://www.bsidesoft.com/hika/s68/2.html
+      5. https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Block_formatting_context
+   2. Inline Formatting Context(IFC): 가로로 배치 시작
+   3. IFC는 보통 BFC안에서 발동
+   4. layering: 서로 elements는 전혀 관심 없음
+18. display 모델
+   1. display-outside : block, inline, inline-block(부모가 봤을 떄 어떻게 결정했으면 좋겠다.)
+   2. display-inside: table, flex, grid(내가 어떻게 변경되는지 결정했으면 좋겠다.)
+   3. display-internal: table-cell ....
+19. Wrap content: inline은 내부 content의 크기로 width을 결정.(기본적으로 width, hight를 줄수 없다. margin, padding도 줄수 없다.)
+20. float 
+   1. 블럭 요소에 대해서는 떠 있고 line 요소 대해서는 가이드를 준다.
+   2. BFC 박스 기준으로 위치를 정한다.
+21. psudo: 그 의미를 나타내고 있지만 대체 가능, 가짜지만 진짜인 경우, 실제하지만 딱히 표현하기 힘든 것(ex. 마우스 오버 등)
+   1. elements: html에는 존재하지 않지만 실제 존재하게 보여주는 것(:after 등), 그림을 그리기 위한 elements
+21. clear
+   1. float의 영향력 제거
 
  
