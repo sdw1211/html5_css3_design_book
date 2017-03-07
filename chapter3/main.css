@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body {font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;}
+body {margin:0; padding:0; font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;}
 
 div.box1, div.box2, div.box3, div.box4, div.box5 {
     width:100%;
@@ -33,37 +33,38 @@ div.box2 {
 
 div.box5 {
     padding:15px 0 15px 0;
-    border-top:solid 1px #ddd;
+    border:1px solid #ddd;
 }
 
 .site h1 a {color: #000; text-decoration: none;}
 .site h1 {font-size:30px; margin:0;}
 
-.story h1 {font-size:36px; margin-top: 0; margin-bottom: 20px;}
-.story p {margin-top: 0; margin-bottom: 20px;}
+.story h1 {font-size:36px; margin: 0 0 20px;}
+.story p {margin-top: 0 0 20px;}
 .story img {max-width:100%; height:auto;}
 
-.menu ul {margin:0; padding:0; list-style: none;}
-.menu ul li a {display:block; padding:5px; color:#000; font-size: 14px; text-decoration: none;}
-.menu ul li a:hover {background-color: #eee;}
-.menu h1 {margin-top:0; margin-bottom:10px; border-bottom: dotted 2px #ddd; color: #666; font-size: 18px;}
+aside h1 {margin-top:0; margin-bottom:10px; border-bottom: 2px dotted #ddd; color: #666; font-size: 18px;}
 
-.vmenu ul {margin:0; padding:0; list-style: none;}
-.vmenu ul li {float: left; width:auto;}
-.vmenu ul li a {display:block; padding:15px; color:#000; font-size: 14px; text-decoration: none;}
-.vmenu ul li a:hover {background-color: #75dbe7;}
-.vmenu ul:after {
+aside ul {margin:0; padding:0; list-style: none;}
+aside ul li a {line-height:14px; display:block; padding:5px; color:#000; font-size: 14px; text-decoration: none;}
+aside ul li a:hover {background-color: #eee;}
+
+menu {margin:0; padding:0; list-style: none;}
+menu:after {
     content: "";
     display: block;
     clear: both;
 }
+menu li {float: left; width:auto;}
+menu li a {line-height:14px; display:block; padding:15px; color:#000; font-size: 14px; text-decoration: none;}
+menu li a:hover {background-color: #75dbe7;}
 
 .copyright p {
     margin:0; color:#666; font-size: 14px;
 }
 
 @media all and (max-width: 599px) {
-    .vmenu ul li a {padding:10px 3px; font-size: 11px;}
+    menu li a {padding:10px 3px; font-size: 11px;}
     .story h1 {font-size: 26px;}
     .site h1 {font-size: 20px;}
     div.box1 {
@@ -74,7 +75,7 @@ div.box5 {
         padding-top:25px;
     }
 
-    .menu.top_margin_30 {margin-top:30px;}
+    aside.top_margin_30 {margin-top:30px;}
 }
 
 @media all and (min-width: 600px) and (max-width: 767px) {
@@ -104,7 +105,7 @@ div.box5 {
 }
 
 @media all and (min-width: 768px) {
-    .menu.top_margin_30 {margin-top:30px;}
+    aside.top_margin_30 {margin-top:30px;}
 
     div.boxA div {
         float:left;
