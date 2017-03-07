@@ -19,8 +19,8 @@ div.boxA, div.boxB {
 
 @Media (min-width:768px) {
     div.box1 { }
-    div.box2 {float: right; width:80%; }
-    div.box3 {float: right; width:20%; }
+    div.box2 {float: left; width:100%; margin-right:-300px; padding-right:300px; }
+    div.box3 {float: left; width:300px; }
     div.box4 {width:20% }
 
     div.boxB {float: left; width:80%;}
@@ -37,8 +37,11 @@ div.boxA, div.boxB {
     }
 
     div.sub{
-        position:fixed;
-        left:0px;
-        top:0px;
+        position:absolute;
+        left:500px;
+        top:500px;
+        right:200px;
+        top:300px;
+        width:30px;
     }
 }
